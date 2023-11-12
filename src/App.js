@@ -13,7 +13,7 @@ import Contact from './components/contact/Contact';
 
 const App = () => {
     return (
-        <>
+        <div>
             <Sidebar />
             <main className="main">
                 <Home />
@@ -26,7 +26,7 @@ const App = () => {
                 <Blog />
                 <Contact />
             </main>
-        </>
+        </div>
     );
 };
 
