@@ -1,0 +1,123 @@
+.about__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section__title {
+    margin-bottom: 7.5rem;
+}
+
+.about__data {
+    padding: 1.875rem;
+    background-color: var(--container-color);
+    box-shadow: var(--shadow);
+    border-radius: var(--border-radius);
+    width: 100%;
+    max-width: 1080px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    align-self: flex-start;
+}
+
+.about__details {
+    margin-top: 1.875rem;
+    width: 100%;
+    max-width: 800px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1.875rem;
+}
+
+.about__img-container {
+  position: relative;
+  width: 410px;
+  height: 410px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius:  hsl(0, 0%, 100%);
+  border: 0.5rem solid hsl(350, 20%, 98%);
+  box-shadow: 0 0 4rem hsl(0, 0%, 0%); /* Add a subtle box shadow */
+}
+
+.about__img {
+  width: auto;
+  height: auto;
+  border-radius: var(--your-border-radius);
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.about__img-container:hover .about__img {
+  transform: scale(1.5); /* Increase scale on hover */
+}
+
+.about__img-container::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0);
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  border-top: 0.2rem solid hsl(345, 100%, 50%);
+  border-bottom: 0.2rem solid hsl(345, 100%, 50%);
+  border-left: 0.2rem solid hsl(345, 100%, 50%);
+  border-right: 0.2rem solid hsl(345, 100%, 50%);
+  animation: spin 8s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@media (min-width: 768px) {
+    .about__container {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .about__data {
+        margin-top: 0;
+        margin-left: 1.875rem;
+        text-align: left;
+        align-self: auto;
+    }
+
+    .about__img {
+      margin-bottom: 0;
+      margin-right: 0;
+  }
+}
+
+.about__detail {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.about__detail::before {
+    content: '';
+    position: absolute;
+    left: -2rem; /* Adjust as needed for spacing */
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 3rem; /* Adjust as needed for the icon size */
+}
+
+.about__detail i {
+    margin-right: 1rem; /* Adjust as needed for spacing between icon and text */
+    color: hsl(345, 100%, 50%);
+}
+.btn {
+  margin-top: 1.5rem; /* Add margin to the top */
+}
